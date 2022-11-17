@@ -1,0 +1,36 @@
+---
+title: "Package Tutorial"
+author: "Gaelyn Gros"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# An Introduction to my R package
+### A bit smoller
+
+My R package is very *useful* and it does **three** things.
+
+We can go onto a new line by leaving one line of space between texts.
+
+```{r}
+sum(1,4)
+```
+
+## Installation Instructions
+
+```{r eval=FALSE, include=TRUE}
+install.packages("phytools")
+# But if you include text in a code chunk it must be commented out.
+```
+
+
+We can include text anywhere within the document.
+
+
+![Caption](path/to/image)
+
+It is possible to include [hyperlinks](kylepiller.com)
+
+
+
+
