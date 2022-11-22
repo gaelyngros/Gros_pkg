@@ -18,8 +18,15 @@ sum(1,4)
 
 ## Installation Instructions
 
+Step 1 is to download the water quality data needed to use this package.
 ```{r eval=FALSE, include=TRUE}
-install.packages("phytools")
+download.file(url = "https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv", destfile = filepath) 
+```              
+
+Step 2 is to download the packages needed for the package. :) 
+```{r eval=FALSE, include=TRUE}
+install.packages("tidyverse")
+install.packages("leaflet")
 # But if you include text in a code chunk it must be commented out.
 ```
 
