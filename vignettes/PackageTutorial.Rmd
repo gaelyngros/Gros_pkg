@@ -5,10 +5,11 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-# An Introduction to my R package
-### A bit smoller
+# An Introduction to grosproj R package
+### This package will be used to remove na's, create a sampling location map, scatte plot, and 
+### linear model of water quality data
 
-My R package is very *useful* and it does **three** things.
+My R package is applicable to a water quality dataset with a download link provided below. It includes **cleaning and filtering data, a linear model, mapping of sampling coordinates, and scatter plot of coordinate** data.
 
 We can go onto a new line by leaving one line of space between texts.
 
@@ -27,17 +28,84 @@ Step 2 is to download the packages needed for the package. :)
 ```{r eval=FALSE, include=TRUE}
 install.packages("tidyverse")
 install.packages("leaflet")
-# But if you include text in a code chunk it must be commented out.
+install.packages("sf")
+install.packages("mapview")
+# These packages are required for full use of the grosproj package but are not required for every function.
 ```
 
+The following codes are the functions included in my package:
 
-We can include text anywhere within the document.
+```{r}
+clean_data <- function(filepath) {
+  data_raw <- read_csv(filepath)
+  data_clean <- data_raw %>%
+    drop_na()
+  write.csv(file = "ac_clean.csv", data_clean)
+  return(is.na(data_clean))
+}
+```
+
+```{r}
+scatp <- function(filepath) {
+  scatp_raw <- read_csv(filepath)
+  scatp_data <- scatp_raw
+grouped_rivers_plot <- ggplot(scatp_data, aes(x = longitude, y = latitude, color = river)) + geom_point()
+return(grouped_rivers_plot)
+}
+```
+
+```{r}
+lin_model <- function(filepath) {
+  lin_data_raw <- read_csv(filepath)
+  lin_data <- lin_data_raw 
+  model_fit <- lm(latitude ~ longitude + river + longitude:river, data = lin_data)
+  return(summary(model_fit))
+  }
+```
+
+```{r}
+ouachita_filtered <- function(filepath) {
+  ouachita_raw <- read_csv(filepath)
+  ouachita_river <- ac_clean %>%  
+    filter(month == 8) 
+  return(ouachita_river)
+}
+```
+
+```{r}
+red_filtered <- function(filepath) {
+  red_raw <- read_csv(filepath)
+  red_river <- ac_clean %>%  
+    filter(month == 6) 
+  return(red_river)
+}
+```
+
+```{r}
+sabine_filtered <- function(filepath) {
+  sabine_raw <- read_csv(filepath)
+  sabine_river <- ac_clean %>%  
+    filter(month == 6 & day <= 23) 
+  return(sabine_river)
+}
+```
+
+```{r}
+leafmap <- function(filepath) {
+leafmap_raw <- read_csv(filepath)
+leafmap_data <- leafmap_raw
+samples_leafmap <- leaflet(ac_clean) %>% 
+addTiles() %>% 
+  addCircleMarkers(~longitude, ~latitude, radius = runif(100, 4, 10), color = c('navy'))
+return(samples_leafmap)
+}
+```
+
+More functions will be included in this package but they are not complete, to avoid interference with the operation of this package, the functions have been included elsewhere on my website for further work.
 
 
+If you have any questions, you will not find the answer at kylepiller.com, however you may be interested in clicking the link anyway. [http://www.kylepiller.com/](kylepiller.com)
+
+
+Random note for me to reference later:
 ![Caption](path/to/image)
-
-It is possible to include [hyperlinks](kylepiller.com)
-
-
-
-
