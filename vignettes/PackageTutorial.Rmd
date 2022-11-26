@@ -11,10 +11,9 @@ output: html_document
 
 My R package is applicable to a water quality dataset with a download link provided below. It includes **cleaning and filtering data, a linear model, mapping of sampling coordinates, and scatter plot of coordinate** data.
 
-We can go onto a new line by leaving one line of space between texts.
 
 ```{r}
-sum(1,4)
+#sum(1,4)
 ```
 
 ## Installation Instructions
@@ -45,9 +44,15 @@ clean_data <- function(filepath) {
 }
 ```
 
+Now that we have written a new csv file with no na's, let's assign that file to an object for the following functions.
+
 ```{r}
-scatp <- function(filepath) {
-  scatp_raw <- read_csv(filepath)
+ac_clean <- read_csv("../data/ac_clean.csv")
+```
+
+```{r}
+scatp <- function(ac_clean) {
+  scatp_raw <- ac_clean
   scatp_data <- scatp_raw
 grouped_rivers_plot <- ggplot(scatp_data, aes(x = longitude, y = latitude, color = river)) + geom_point()
 return(grouped_rivers_plot)
@@ -55,8 +60,8 @@ return(grouped_rivers_plot)
 ```
 
 ```{r}
-lin_model <- function(filepath) {
-  lin_data_raw <- read_csv(filepath)
+lin_model <- function(ac_clean) {
+  lin_data_raw <- ac_clean
   lin_data <- lin_data_raw 
   model_fit <- lm(latitude ~ longitude + river + longitude:river, data = lin_data)
   return(summary(model_fit))
@@ -64,8 +69,8 @@ lin_model <- function(filepath) {
 ```
 
 ```{r}
-ouachita_filtered <- function(filepath) {
-  ouachita_raw <- read_csv(filepath)
+ouachita_filtered <- function(ac_clean) {
+  ouachita_raw <- ac_clean
   ouachita_river <- ac_clean %>%  
     filter(month == 8) 
   return(ouachita_river)
@@ -73,8 +78,8 @@ ouachita_filtered <- function(filepath) {
 ```
 
 ```{r}
-red_filtered <- function(filepath) {
-  red_raw <- read_csv(filepath)
+red_filtered <- function(ac_clean) {
+  red_raw <- ac_clean
   red_river <- ac_clean %>%  
     filter(month == 6) 
   return(red_river)
@@ -82,8 +87,8 @@ red_filtered <- function(filepath) {
 ```
 
 ```{r}
-sabine_filtered <- function(filepath) {
-  sabine_raw <- read_csv(filepath)
+sabine_filtered <- function(ac_clean) {
+  sabine_raw <- ac_clean
   sabine_river <- ac_clean %>%  
     filter(month == 6 & day <= 23) 
   return(sabine_river)
@@ -91,8 +96,8 @@ sabine_filtered <- function(filepath) {
 ```
 
 ```{r}
-leafmap <- function(filepath) {
-leafmap_raw <- read_csv(filepath)
+leafmap <- function(ac_clean) {
+leafmap_raw <- ac_clean
 leafmap_data <- leafmap_raw
 samples_leafmap <- leaflet(ac_clean) %>% 
 addTiles() %>% 

@@ -1,14 +1,14 @@
 #' Making a map of our dataset using leaflet
 #' 
-#' @param filepath
+#' @param dataframe
 #' 
 #' @return leaflet map displaying sampling coordinates
 #' 
 #' @examples
-#' map_data("data/ac_clean.csv") 
+#' map_data(ac_clean) 
 #' 
-leafmap <- function(filepath) {
-leafmap_raw <- read_csv(filepath)
+leafmap <- function(ac_clean) {
+leafmap_raw <- ac_clean
 leafmap_data <- leafmap_raw
 samples_leafmap <- leaflet(ac_clean) %>% 
 addTiles() %>% 
