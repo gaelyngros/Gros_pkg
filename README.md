@@ -27,6 +27,7 @@ install.packages("tidyverse")
 install.packages("leaflet")
 install.packages("sf")
 install.packages("mapview")
+install.packages("ggplot2")
 # These packages are required for full use of the grosproj package but are not required for every function.
 ```
 
