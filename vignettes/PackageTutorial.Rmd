@@ -6,18 +6,19 @@ output: html_document
 ---
 
 # An Introduction to grosproj R package
-**This package will be used to remove na's and to create a sampling location map, scatter plot, and linear model of a water quality dataset.**
+
+*This package will be used to remove na's and to create a sampling location map, scatter plot, and linear model of a water quality dataset.*
 
 My R package is applicable to a water quality dataset with a download link provided below. It includes **cleaning and filtering data, a linear model, mapping of sampling coordinates, and scatter plot of coordinate** data.
 
 ## Installation Instructions
 
-Step 1 is to download the water quality data needed to use this package:
+**Step 1** is to download the water quality data needed to use this package:
 ```{r eval=FALSE, include=TRUE}
 download.file(url = "https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv", destfile = filepath) 
 ```              
 
-Step 2 is to download the packages needed for the package. :) 
+**Step 2** is to download the packages needed for the package. :) 
 ```{r eval=FALSE, include=TRUE}
 install.packages("tidyverse")
 install.packages("leaflet")
@@ -35,7 +36,7 @@ library(sf)
 library(mapview)
 ```
 
-The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
+**Step 3** The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
 
 ```{r}
 clean_data <- function(filepath) {
@@ -53,7 +54,7 @@ Now that we have written a new csv file with no na's, let's assign that file to 
 ac_clean <- read_csv("../data/ac_clean.csv")
 ```
 
-Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
+**Step 4** Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
 
 Creating a scatterplot:
 ```{r}
@@ -115,10 +116,10 @@ return(samples_leafmap)
 }
 ```
 
-More functions will be included in this package but they are not complete, to avoid interference with the operation of this package, the functions have been included elsewhere on my website for further work.
+*More functions will be included in this package but they are not complete, to avoid interference with the operation of this package, the functions have been included elsewhere on my website for further work.*
 
 
-If you have any questions, you will not find the answer at kylepiller.com, however you may be interested in clicking the link anyway. [http://www.kylepiller.com/](kylepiller.com)
+**BONUS:** If you have any questions, you will not find the answer at kylepiller.com, however you may be interested in clicking the link anyway. [http://www.kylepiller.com/](kylepiller.com)
 
 
 Random note for me to reference later:
