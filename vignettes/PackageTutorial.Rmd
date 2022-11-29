@@ -6,7 +6,7 @@ output: html_document
 ---
 
 # An Introduction to grosproj R package
-### This package will be used to remove na's, create a sampling location map, scatter plot, and a linear model of a water quality data
+**This package will be used to remove na's and to create a sampling location map, scatter plot, and linear model of a water quality dataset.**
 
 My R package is applicable to a water quality dataset with a download link provided below. It includes **cleaning and filtering data, a linear model, mapping of sampling coordinates, and scatter plot of coordinate** data.
 
