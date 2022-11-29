@@ -69,28 +69,22 @@
   <div class="contents col-md-9">
 
 <p><code>{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)</code></p>
-<p>##Package Introduction Enter a short description of your R package.</p>
-<ul>
-<li>What does it do?</li>
-<li>What type of data is it meant to work with?</li>
-<li>What are the major outputs of your R package?</li>
-</ul>
-<p>This package is designed to remove NAs from a dataset, run an ANOVA and linear model, and plot the data.</p>
-<p>This package is meant to work with numerical data and character data, where numerical is required and character is accessory.</p>
-<p>The major outputs of this package are figures from the regressions and plots.</p>
+<p>##Package Introduction</p>
+<p>This package is designed to remove NAs from a dataset, produce a scatter plot and linear model, and map the data.</p>
+<p>This package is meant to work with numerical data and character data, where numerical is required and character is accessory. Geographic coordinate data is ideal but not required for every function.</p>
+<p>The major outputs of this package are figures from the plots and maps, as well as statistical information from the linearl model.</p>
 <p>##Installation</p>
-<ul>
-<li>Are there any R packages yours depends on?</li>
-</ul>
-<p>This packages requires the library of tidy verse for data cleaning as well as plotting via ggplot.</p>
+<p>This packages requires the library of tidyverse for data cleaning as well as plotting via ggplot and mapping via leaflet. The libraries sf and mapview will be required for a function that is not added currently but will be added in the future.</p>
 <pre class="{r}"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
-<span><span class="co">#install.packages("leaflet")</span></span></code></pre>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"leaflet"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sf"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"mapview"</span><span class="op">)</span></span>
+<span><span class="co"># These packages are required for full use of the grosproj package but are not required for every function.</span></span></code></pre>
 <div class="section level2">
 <h2 id="usage-examples">Usage Examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
 </h2>
-<p>In this section, provide some context as to why someone would want to download your package.</p>
-<p>Multiplication is a fundamental mathematicall operation and if a user wanted to do that in this packages, they would do:</p>
-<pre class="{r}"><code><span><span class="fu">mult</span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span></span></code></pre>
+<p>This pacakge is designed to anaylze a particular water quality dataset provided below, however it can be applicable to other water quality datasets given the correct fields:</p>
+<pre class="{r}"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv"</span>, destfile <span class="op">=</span> <span class="va">filepath</span><span class="op">)</span></span></code></pre>
 </div>
 
   </div>

@@ -32,6 +32,15 @@ install.packages("mapview")
 # These packages are required for full use of the grosproj package but are not required for every function.
 ```
 
+Make sure to join the appropriate libraries after installing them:
+
+```{r}
+library(tidyverse)
+library(leaflet)
+library(sf)
+library(mapview)
+```
+
 The following codes are the functions included in my package:
 
 ```{r}
