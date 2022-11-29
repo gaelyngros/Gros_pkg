@@ -1,12 +1,14 @@
 #' Making a map of our dataset using leaflet
 #' 
-#' @param dataframe
+#' @param ac_clean The dataframe you are using for your function 
 #' 
 #' @return leaflet map displaying sampling coordinates
+#'
 #' 
 #' @examples
 #' map_data(ac_clean) 
-#' 
+#' @export
+
 leafmap <- function(ac_clean) {
 leafmap_raw <- ac_clean
 leafmap_data <- leafmap_raw

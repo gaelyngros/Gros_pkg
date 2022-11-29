@@ -105,25 +105,16 @@ package. :)</p>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"leaflet"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sf"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"mapview"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span>
 <span><span class="co"># These packages are required for full use of the grosproj package but are not required for every function.</span></span></code></pre></div>
 <p>Make sure to join the appropriate libraries after installing
 them:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## ── <span style="font-weight: bold;">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.2 ──</span></span>
-<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">ggplot2</span> 3.3.6      <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr  </span> 0.3.5 </span></span>
-<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble </span> 3.1.8      <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">dplyr  </span> 1.0.10</span></span>
-<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr  </span> 1.2.1      <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr</span> 1.4.1 </span></span>
-<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr  </span> 2.1.3      <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats</span> 0.5.2 </span></span>
-<span><span class="co">## ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span></span>
-<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span></span></code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE</span></span></code></pre>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/mapview" class="external-link">mapview</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/mapview" class="external-link">mapview</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="using-the-grosproj">Using the grosproj<a class="anchor" aria-label="anchor" href="#using-the-grosproj"></a>
@@ -131,7 +122,7 @@ them:</p>
 <p><strong>Step 1:</strong> The following codes are the functions
 included in my package, with first a data clean function where we create
 a new CSV file:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">clean_data</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">filepath</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">data_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">filepath</span><span class="op">)</span></span>
 <span>  <span class="va">data_clean</span> <span class="op">&lt;-</span> <span class="va">data_raw</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -141,22 +132,13 @@ a new CSV file:</p>
 <span><span class="op">}</span></span></code></pre></div>
 <p>Now that we have written a new csv file with no na’s, let’s assign
 that file to an object for the following functions:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ac_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="st">"../data/ac_clean.csv"</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## New names:</span></span>
-<span><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">127</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">18</span></span></span>
-<span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span></span></span>
-<span><span class="co">## <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span> <span style="font-weight: bold;">Delimiter:</span> "," <span style="color: #BB0000;">chr</span></span></span>
-<span><span class="co">## (3): site, stream_position, river <span style="color: #00BB00;">dbl</span> (15): ...1, sample, latitude, longitude,</span></span>
-<span><span class="co">## temperature, conductivity, DO, ...</span></span>
-<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data. <span style="color: #00BBBB;">ℹ</span></span></span>
-<span><span class="co">## Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">## <span style="color: #00BBBB;">•</span> `` -&gt; `...1`</span></span></code></pre>
 <p><strong>Step 2:</strong> Now that we have assigned an object with our
 new clean dataframe, we can run the following functions using the object
 for the clean dataset:</p>
 <p>Creating a scatterplot:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scatp</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">scatp_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span>  <span class="va">scatp_data</span> <span class="op">&lt;-</span> <span class="va">scatp_raw</span></span>
@@ -164,7 +146,7 @@ for the clean dataset:</p>
 <span><span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">grouped_rivers_plot</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p>Running a linear model:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">lin_model</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">lin_data_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span>  <span class="va">lin_data</span> <span class="op">&lt;-</span> <span class="va">lin_data_raw</span> </span>
@@ -172,21 +154,21 @@ for the clean dataset:</p>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">model_fit</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="op">}</span></span></code></pre></div>
 <p>Filtering the data based on the river column:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ouachita_filtered</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">ouachita_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span>  <span class="va">ouachita_river</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op">==</span> <span class="fl">8</span><span class="op">)</span> </span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">ouachita_river</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">red_filtered</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">red_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span>  <span class="va">red_river</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op">==</span> <span class="fl">6</span><span class="op">)</span> </span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">red_river</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sabine_filtered</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">sabine_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span>  <span class="va">sabine_river</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  </span>
@@ -194,7 +176,7 @@ for the clean dataset:</p>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">sabine_river</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p>Creating a map of the sampling coordinates:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">leafmap</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">ac_clean</span><span class="op">)</span> <span class="op">{</span></span>
 <span><span class="va">leafmap_raw</span> <span class="op">&lt;-</span> <span class="va">ac_clean</span></span>
 <span><span class="va">leafmap_data</span> <span class="op">&lt;-</span> <span class="va">leafmap_raw</span></span>

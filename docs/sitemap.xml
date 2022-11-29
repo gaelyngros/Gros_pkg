@@ -28,6 +28,21 @@
     <loc>/reference/index.html</loc>
   </url>
   <url>
+    <loc>/reference/leafmap.html</loc>
+  </url>
+  <url>
     <loc>/reference/lin_model.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ouachita_filtered.html</loc>
+  </url>
+  <url>
+    <loc>/reference/red_filtered.html</loc>
+  </url>
+  <url>
+    <loc>/reference/sabine_filtered.html</loc>
+  </url>
+  <url>
+    <loc>/reference/scatp.html</loc>
   </url>
 </urlset>

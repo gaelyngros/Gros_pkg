@@ -4,10 +4,10 @@
 \alias{lin_model}
 \title{Creating a linear model of a particular dataset}
 \usage{
-lin_model(filepath)
+lin_model(ac_clean)
 }
 \arguments{
-\item{filepath}{}
+\item{ac_clean}{The dataframe you are using for your function}
 }
 \value{
 Linear model of selected dataset
@@ -16,6 +16,5 @@ Linear model of selected dataset
 Creating a linear model of a particular dataset
 }
 \examples{
-lin_model("ac_clean.csv")
-
+lin_model(ac_clean)
 }

@@ -25,23 +25,25 @@ install.packages("tidyverse")
 install.packages("leaflet")
 install.packages("sf")
 install.packages("mapview")
+install.packages("ggplot2")
 # These packages are required for full use of the grosproj package but are not required for every function.
 ```
 
 Make sure to join the appropriate libraries after installing them:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 library(tidyverse)
 library(leaflet)
 library(sf)
 library(mapview)
+library(ggplot2)
 ```
 
 ## Using the grosproj
 
 **Step 1:** The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 clean_data <- function(filepath) {
   data_raw <- read_csv(filepath)
   data_clean <- data_raw %>%
@@ -53,14 +55,14 @@ clean_data <- function(filepath) {
 
 Now that we have written a new csv file with no na's, let's assign that file to an object for the following functions:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 ac_clean <- read_csv("../data/ac_clean.csv")
 ```
 
 **Step 2:** Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
 
 Creating a scatterplot:
-```{r}
+```{r eval=FALSE, include=TRUE}
 scatp <- function(ac_clean) {
   scatp_raw <- ac_clean
   scatp_data <- scatp_raw
@@ -70,7 +72,7 @@ return(grouped_rivers_plot)
 ```
 
 Running a linear model:
-```{r}
+```{r eval=FALSE, include=TRUE}
 lin_model <- function(ac_clean) {
   lin_data_raw <- ac_clean
   lin_data <- lin_data_raw 
@@ -80,7 +82,7 @@ lin_model <- function(ac_clean) {
 ```
 
 Filtering the data based on the river column:
-```{r}
+```{r eval=FALSE, include=TRUE}
 ouachita_filtered <- function(ac_clean) {
   ouachita_raw <- ac_clean
   ouachita_river <- ac_clean %>%  
@@ -89,7 +91,7 @@ ouachita_filtered <- function(ac_clean) {
 }
 ```
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 red_filtered <- function(ac_clean) {
   red_raw <- ac_clean
   red_river <- ac_clean %>%  
@@ -98,7 +100,7 @@ red_filtered <- function(ac_clean) {
 }
 ```
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 sabine_filtered <- function(ac_clean) {
   sabine_raw <- ac_clean
   sabine_river <- ac_clean %>%  
@@ -108,7 +110,7 @@ sabine_filtered <- function(ac_clean) {
 ```
 
 Creating a map of the sampling coordinates:
-```{r}
+```{r eval=FALSE, include=TRUE}
 leafmap <- function(ac_clean) {
 leafmap_raw <- ac_clean
 leafmap_data <- leafmap_raw
@@ -122,7 +124,7 @@ return(samples_leafmap)
 *More functions will be included in this package but they are not complete, to avoid interference with the operation of this package, the functions have been included elsewhere on my website for further work.*
 
 
-**BONUS:** If you have any questions, you will not find the answer at kylepiller.com, however you may be interested in clicking the link anyway. [http://www.kylepiller.com/](kylepiller.com)
+**BONUS:** If you have any questions, you will not find the answer at kylepiller.com, however you may be interested in clicking the link anyway. [kylepiller.com/](kylepiller.com)
 
 
 Random note for me to reference later:

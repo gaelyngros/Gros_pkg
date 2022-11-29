@@ -1,14 +1,13 @@
 #' Removing NAs from all columns of the dataset
 #' 
-#' @param filepath
-#' 
+#' @param filepath The file you would like to use in its corresponding directory
 #'
 #' @return dataset without NA's
 #' 
 #' @examples
 #' clean_data("data/ac_field_data.csv")
-#' 
-#' 
+#' @export
+
 clean_data <- function(filepath) {
   data_raw <- read_csv(filepath)
   data_clean <- data_raw %>%

@@ -7,7 +7,7 @@
 clean_data(filepath)
 }
 \arguments{
-\item{filepath}{}
+\item{filepath}{The file you would like to use in its corresponding directory}
 }
 \value{
 dataset without NA's
@@ -17,5 +17,4 @@ Removing NAs from all columns of the dataset
 }
 \examples{
 clean_data("data/ac_field_data.csv")
-
 }

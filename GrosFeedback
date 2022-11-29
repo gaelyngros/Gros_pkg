@@ -1,0 +1,1 @@
+The onyl recommendation I have, and it's just a reccommendation not a mandate, is instead of reading in the data in every function, read it in once. It could be in the first couple lines of your tutorial. Then, pass the data object to each function. 

@@ -1,0 +1,9 @@
+^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^gros.project.3\.Rcheck$
+^gros.project.3.*\.tar\.gz$
+^gros.project.3.*\.tgz$
+^grosproj\.Rcheck$
+^grosproj.*\.tar\.gz$
+^grosproj.*\.tgz$

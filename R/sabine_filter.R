@@ -1,12 +1,14 @@
 #' Classifying the Sabine River column
 #' 
-#' @param dataframe
+#' @param ac_clean The dataframe you are using for your function 
 #' 
 #' @return fields for the sabine river
+#' @export
 #' 
 #' @examples
 #' sabine_filtered(ac_clean) 
-#' 
+#' @export
+
 sabine_filtered <- function(ac_clean) {
   sabine_raw <- ac_clean
   sabine_river <- ac_clean %>%  
