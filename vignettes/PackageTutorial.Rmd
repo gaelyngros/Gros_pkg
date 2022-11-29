@@ -36,7 +36,9 @@ library(sf)
 library(mapview)
 ```
 
-**Step 3** The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
+## Using the grosproj
+
+**Step 1** The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
 
 ```{r}
 clean_data <- function(filepath) {
@@ -54,7 +56,7 @@ Now that we have written a new csv file with no na's, let's assign that file to 
 ac_clean <- read_csv("../data/ac_clean.csv")
 ```
 
-**Step 4** Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
+**Step 2** Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
 
 Creating a scatterplot:
 ```{r}
