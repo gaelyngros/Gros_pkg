@@ -6,19 +6,13 @@ output: html_document
 ---
 
 # An Introduction to grosproj R package
-### This package will be used to remove na's, create a sampling location map, scatter plot, and 
-### linear model of water quality data
+### This package will be used to remove na's, create a sampling location map, scatter plot, and a linear model of a water quality data
 
 My R package is applicable to a water quality dataset with a download link provided below. It includes **cleaning and filtering data, a linear model, mapping of sampling coordinates, and scatter plot of coordinate** data.
 
-
-```{r}
-#sum(1,4)
-```
-
 ## Installation Instructions
 
-Step 1 is to download the water quality data needed to use this package.
+Step 1 is to download the water quality data needed to use this package:
 ```{r eval=FALSE, include=TRUE}
 download.file(url = "https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv", destfile = filepath) 
 ```              
@@ -41,7 +35,7 @@ library(sf)
 library(mapview)
 ```
 
-The following codes are the functions included in my package:
+The following codes are the functions included in my package, with first a data clean function where we create a new CSV file:
 
 ```{r}
 clean_data <- function(filepath) {
@@ -53,12 +47,15 @@ clean_data <- function(filepath) {
 }
 ```
 
-Now that we have written a new csv file with no na's, let's assign that file to an object for the following functions.
+Now that we have written a new csv file with no na's, let's assign that file to an object for the following functions:
 
 ```{r}
 ac_clean <- read_csv("../data/ac_clean.csv")
 ```
 
+Now that we have assigned an object with our new clean dataframe, we can run the following functions using the object for the clean dataset:
+
+Creating a scatterplot:
 ```{r}
 scatp <- function(ac_clean) {
   scatp_raw <- ac_clean
@@ -68,6 +65,7 @@ return(grouped_rivers_plot)
 }
 ```
 
+Running a linear model:
 ```{r}
 lin_model <- function(ac_clean) {
   lin_data_raw <- ac_clean
@@ -77,6 +75,7 @@ lin_model <- function(ac_clean) {
   }
 ```
 
+Filtering the data based on the river column:
 ```{r}
 ouachita_filtered <- function(ac_clean) {
   ouachita_raw <- ac_clean
@@ -104,6 +103,7 @@ sabine_filtered <- function(ac_clean) {
 }
 ```
 
+Creating a map of the sampling coordinates:
 ```{r}
 leafmap <- function(ac_clean) {
 leafmap_raw <- ac_clean
