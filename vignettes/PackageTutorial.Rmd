@@ -16,7 +16,7 @@ My R package is applicable to a water quality dataset with a download link provi
 
 **Step 1:** is to download the water quality data needed to use this package:
 ```{r eval=FALSE, include=TRUE}
-download.file(url = "https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv", destfile = filepath) 
+download.file(url = "https://raw.githubusercontent.com/gaelyngros/Gros_pkg/master/data/ac_field_data.csv", destfile = "/cloud/project/data/ac_field_data.csv") 
 ```              
 
 **Step 2:** is to download the packages needed for the package. :) 
@@ -29,6 +29,11 @@ install.packages("ggplot2")
 # These packages are required for full use of the grosproj package but are not required for every function.
 ```
 
+Great, now its time to download grosproj!
+```{r eval=FLASE, include=TRUE}
+remotes::install_github("gaelyngros/Gros_pkg")
+```
+
 Make sure to join the appropriate libraries after installing them:
 
 ```{r eval=FALSE, include=TRUE}
@@ -37,6 +42,7 @@ library(leaflet)
 library(sf)
 library(mapview)
 library(ggplot2)
+library(grosproj)
 ```
 
 ## Using the grosproj

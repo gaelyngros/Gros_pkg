@@ -6,6 +6,7 @@
 #' 
 #' @example
 #' scatp(ac_clean)
+#' @export
 #' 
 scatp <- function(ac_clean) {
   scatp_raw <- ac_clean

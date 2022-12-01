@@ -6,7 +6,7 @@
 #'
 #' 
 #' @examples
-#' map_data(ac_clean) 
+#' leafmap(ac_clean) 
 #' @export
 
 leafmap <- function(ac_clean) {
